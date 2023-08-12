@@ -30,6 +30,11 @@ const router = createRouter({
       name: "Project3",
       component: () => import("../components/DetalleProject/ProjectN3.vue"),
     },
+    {
+      path: "/Project4",
+      name: "Project4",
+      component: () => import("../components/DetalleProject/ProjectN4.vue"),
+    },
   ],
 });
 

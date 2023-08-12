@@ -37,18 +37,34 @@ const route = useRoute()
         </div>
       </div>
       <form
-        class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+        class="md:w-1/2 2xl:w-1/3 my-32 p-10 rounded-lg shadow space-y-6"
         v-if="PaginaInicio"
       >
-      <div
-      class="space-y-4"
+      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
+  
+  >
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <h2
+        class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white"
       >
-      <input
-         class=" bg-orange-800  hover:bg-orange-900 cursor-pointer text-white font-extrabold w-full  p-2 rounded-lg uppercase"
-        value="contactarme"
-        
-         />
+      Do you want to try the game?
+      </h2>
     </div>
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
+    >
+      <form class="space-y-6" action="#" method="POST">
+        <div>
+          <button
+            type="submit"
+            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+           Play
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
     </form>
     </div>
   </header>

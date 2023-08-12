@@ -7,7 +7,7 @@ const projects = [
     title: "VueJs MiniBiz Platform",
     category: "Web Application",
     imgPath: "Dg001.jpg",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
+    img: "../../src/assets/Imagenes/Miniatura1.png",
     imgRelacionadas: [
       {
         id: 1,
@@ -55,7 +55,7 @@ const projects = [
     id: 2,
     title: "Digitacion001",
     category: "Web Game",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
+    img: "../../src/assets/Imagenes/Miniatura2.png",
     imgRelacionadas: [
       {
         id: 1,
@@ -119,7 +119,7 @@ const projects = [
     id: 3,
     title: "VueJs My Whiskey Platform",
     category: "Web Application",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
+    img: "../../src/assets/Imagenes/Miniatura3.png",
     road: { name: "Project3" },
     aboutCliente: {
       Name: "Freelance",
@@ -156,52 +156,60 @@ const projects = [
   },
   {
     id: 4,
-    title: "Cloud Storage Platform",
-    category: "UI/UX Design",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
-    road: { name: "About" },
+    title: "On Round",
+    category: "Mobile Game",
+    img: "../../src/assets/Imagenes/Miniatura1.png",
+    imgRelacionadas: [
+      {
+        id: 1,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 2,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 3,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 4,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+    ],
+    road: { name: "Project4" },
     aboutCliente: {
-      Name: "company Ltd",
-      Services: "UI Design & Frontend Development",
-      Website: "https://company.com",
-      Phone: "555 8888 888",
+      Name: "Freelance",
+      Services: "Full stack developer",
+      Website: "----",
+      Phone: "----",
     },
-    Objective: "lorem",
-    ToolsTechnologies: "HTML, CSS, JavaScript, Vue.js, TailwindCSS, AdobeXD",
-    Challenge: "Lorem",
+    Objective:
+      "Developing a mobile video game with 'speed run' characteristics.",
+    ToolsTechnologies: "Unity & Procreate",
+
+    Challenge: [
+      {
+        id: 1,
+        details:
+          "The following game was conceived with the intention of being my first mobile video game, as a fundamental exercise in Unity. I took the initiative to create a SpeedRun; however, I wasn't satisfied with the final outcome. For this reason, I decided to implement new functionalities to change the gameplay style. As a result, the following features were incorporated: instead of the player jumping over obstacles, they now destroy them using skills. Additionally, instead of having just one character, the game features three distinct characters. A system for unlocking images as rewards to incentivize participation was also introduced, and rather than having only one life, the player now has three before losing the game.",
+      },
+      {
+        id: 2,
+        details:
+          "The game's storyline immerses us in the lives of three motorcyclists aspiring to participate in the 'La Vuelta' event, a competition set in the fictional City of Azzip. The goal of the event is to complete a full lap around the city within a set time, requiring the racers to speed through the track.",
+      }
+    ],
+    future: [
+      {
+        id: 1,
+        details:
+          "The game is currently in a testing phase where significant improvements can be made. Planned enhancements include a 2vs2 mode, the addition of different worlds, customizable appearances, and unlockable motorcycles. If you're interested in this project, we invite you to get in touch with us.",
+      },
+    ],
   },
-  {
-    id: 5,
-    title: "React Social App",
-    category: "Mobile Application",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
-    road: { name: "About" },
-    aboutCliente: {
-      Name: "company Ltd",
-      Services: "UI Design & Frontend Development",
-      Website: "https://company.com",
-      Phone: "555 8888 888",
-    },
-    Objective: "lorem",
-    ToolsTechnologies: "HTML, CSS, JavaScript, Vue.js, TailwindCSS, AdobeXD",
-    Challenge: "Lorem",
-  },
-  {
-    id: 6,
-    title: "Apple Design System",
-    category: "Web Application",
-    img: "../../src/assets/Imagenes/Dg001.jpg",
-    road: { name: "About" },
-    aboutCliente: {
-      Name: "company Ltd",
-      Services: "UI Design & Frontend Development",
-      Website: "https://company.com",
-      Phone: "555 8888 888",
-    },
-    Objective: "lorem",
-    ToolsTechnologies: "HTML, CSS, JavaScript, Vue.js, TailwindCSS, AdobeXD",
-    Challenge: "Lorem",
-  },
+
+
 ];
 
 export default projects;

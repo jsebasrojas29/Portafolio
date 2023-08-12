@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       // Almacena el primer proyecto en una propiedad de datos
-      firstProject: projects[1],
+      firstProject: projects[3],
       showDiv: false,
     };
   },
@@ -19,36 +19,10 @@ export default {
 </script>
 <template>
   <div>
-    <!-- Project heading and meta info -->
-    <p
-      class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
-    >
-      {{ firstProject.title }}
-    </p>
-    <div class="flex">
-      <div class="flex items-center mr-10">
-        <i
-          data-feather="clock"
-          class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
-        ></i>
-        <span
-          class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-        >
-          {{ firstProject.category }}
-        </span>
-      </div>
-      <div class="flex items-center">
-        <i
-          data-feather="tag"
-          class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
-        ></i>
-        <span
-          class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-        >
-          <!-- {{ singleProjectHeader.singleProjectTag }} -->
-        </span>
-      </div>
-    </div>
+    <img
+      src="../../assets/Imagenes/BannerOnRound.jpg"
+      class="rounded-xl cursor-pointer"
+    />
   </div>
 
   <div v-if="showDiv" class="block sm:flex gap-0 sm:gap-10 mt-14">
@@ -156,7 +130,13 @@ export default {
   </div>
 
   <div class="block sm:flex gap-0 sm:gap-10 mt-14">
-    <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+    <div class="w-full sm:w-2/3 text-left">
+      <img
+        src="../../assets/Imagenes/DesarrolloTA.png"
+        alt="Ejemplo de Imagen"
+      />
+    </div>
+    <div class="w-full sm:w-1/3 text-left mt-10 sm:mt-0">
       <p
         class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
       >
@@ -170,14 +150,7 @@ export default {
         {{ projectDetailF.details }}
       </p>
     </div>
-    <div class="w-full sm:w-1/3 text-left">
-      <img
-        src="../../assets/Imagenes/Digitacion_play.png"
-        alt="Ejemplo de Imagen"
-      />
-    </div>
   </div>
-
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
   
   >
@@ -203,12 +176,7 @@ export default {
       </form>
     </div>
   </div>
-
-  
-
-
-
-  <!-- <div
+  <div
     class="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
   >
     <p
@@ -222,6 +190,25 @@ export default {
         <img :src="item.img" class="rounded-xl cursor-pointer" />
       </div>
     </div>
+  </div>
+  <!-- <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+    <div class="mb-10 sm:mb-0">
+      <img
+        src="../../assets/Imagenes/Dg001.jpg"
+        class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+      />
+    </div>
+    <div class="mb-10 sm:mb-0">
+      <img
+        src="../../assets/Imagenes/Dg002.jpg"
+        class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+      />
+    </div>
+    <div class="mb-10 sm:mb-0">
+      <img
+        src="../../assets/Imagenes/Dg003.jpg"
+        class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+      />
+    </div>
   </div> -->
-
 </template>
