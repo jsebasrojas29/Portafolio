@@ -50,6 +50,28 @@ const projects = [
           "Currently, the shift scheduling module is under development, designed to manage multiple employees during a workday, along with the corresponding testing phases.",
       },
     ],
+    future: [
+      {
+        id: 1,
+        details:
+          "At present, the software is being utilized within a local environment as it is still under observation. This implies that there is a possibility for previously unnoticed errors to emerge, ones that might not have surfaced during unit testing. Consequently, during its deployment in this local setting, any identified errors will be duly noted for prompt rectification and update.",
+      },
+      {
+        id: 2,
+        details:
+          "Furthermore, this application is hosted on GitHub, thereby offering interested parties the chance to contribute to the advancement of this project. As for its availability, the software presently exists in the form of a web version",
+      },
+      {
+        id: 3,
+        details:
+          "However, due to privacy considerations, public access to this service is not yet accessible. This situation is slated to change in the near future, once a more stable and dependable version has been achieved.",
+      },
+      {
+        id: 4,
+        details:
+          "Keep an eye on the progression of this exciting project, and contemplate joining us on GitHub to take part in its evolution and ongoing enhancement.",
+      },
+    ],
   },
   {
     id: 2,

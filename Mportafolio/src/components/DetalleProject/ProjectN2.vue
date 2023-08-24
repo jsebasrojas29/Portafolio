@@ -10,15 +10,13 @@ export default {
     };
   },
   mounted() {
-    // Mostrar el div después de un breve retraso al cargar la página
-    setTimeout(() => {
-      this.showDiv = true;
-    }, 1000); // 1000 ms = 1 segundo
+    window.scrollTo(0, 0); // Esto hace que la página se desplace hacia arriba
+  
   },
 };
 </script>
 <template>
-  <div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <!-- Project heading and meta info -->
     <p
       class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
@@ -31,11 +29,10 @@ export default {
           data-feather="clock"
           class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
         ></i>
-        <span
-          class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-        >
+
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">
           {{ firstProject.category }}
-        </span>
+        </h2>
       </div>
       <div class="flex items-center">
         <i
@@ -49,114 +46,93 @@ export default {
         </span>
       </div>
     </div>
-  </div>
 
-  <div v-if="showDiv" class="block sm:flex gap-0 sm:gap-10 mt-14">
-    <!-- Single project left section details -->
-    <div class="w-full sm:w-1/3 text-left">
-      <!-- Single project client details -->
-      <div class="mb-7">
-        <p
-          class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2"
-        >
-          About Client
-        </p>
-        <ul class="leading-loose">
-          <li
-            class="font-general-regular text-ternary-dark dark:text-ternary-light"
+    <div class="block sm:flex gap-0 sm:gap-10 mt-14">
+      <!-- Single project left section details -->
+      <div class="w-full sm:w-1/3 text-left animate-slide-in-left">
+        <!-- Single project client details -->
+        <div class="mb-7">
+          <p
+            class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2 font-semibold text-gray-900"
           >
-            <span>Name: {{ firstProject.aboutCliente.Name }} </span>
-          </li>
-          <li
-            class="font-general-regular text-ternary-dark dark:text-ternary-light"
-          >
-            <span>Services: {{ firstProject.aboutCliente.Services }} </span>
-          </li>
-          <li
-            class="font-general-regular text-ternary-dark dark:text-ternary-light"
-          >
-            <span>Website: {{ firstProject.aboutCliente.Website }} </span>
-          </li>
-          <li
-            class="font-general-regular text-ternary-dark dark:text-ternary-light"
-          >
-            <span>Phone: {{ firstProject.aboutCliente.Phone }} </span>
-          </li>
-        </ul>
-      </div>
+            About Client
+          </p>
 
-      <!-- Single project objectives -->
-      <div class="mb-7">
-        <p
-          class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-        >
-          Objective
-        </p>
-        <p
-          class="font-general-regular text-primary-dark dark:text-ternary-light"
-        >
-          {{ firstProject.Objective }}
-        </p>
-      </div>
-
-      <!-- Single project technologies -->
-      <div class="mb-7">
-        <p
-          class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-        >
-          Tools & Technologies
-        </p>
-        <p
-          class="font-general-regular text-primary-dark dark:text-ternary-light"
-        >
-          {{ firstProject.ToolsTechnologies }}
-        </p>
-      </div>
-
-      <!-- Single project social sharing -->
-      <!-- <div>
-        <p
-          class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-        >
-          Share This
-        </p>
-        <div class="flex items-center gap-3 mt-5">
-          <h2>xxxxxx</h2>
-          <a
-						v-for="social in projectInfo.socialSharings"
-						:key="social.id"
-						:href="social.url"
-						target="__blank"
-						aria-label="Share Project"
-						class="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-						><i
-							:data-feather="social.icon"
-							class="w-4 lg:w-5 h-4 lg:h-5"
-						></i
-					></a>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">Name:</dt>
+            <dd class="inline text-gray-600">
+              {{ firstProject.aboutCliente.Name }}.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">Services:</dt>
+            <dd class="inline text-gray-600">
+              {{ firstProject.aboutCliente.Services }}.
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">Website:</dt>
+            <dd class="inline text-gray-600">
+              {{ firstProject.aboutCliente.Website }}
+            </dd>
+          </div>
+          <div class="relative pl-9">
+            <dt class="inline font-semibold text-gray-900">Phone:</dt>
+            <dd class="inline text-gray-600">
+              {{ firstProject.aboutCliente.Phone }}
+            </dd>
+          </div>
         </div>
-      </div> -->
-    </div>
 
-    <!-- Single project right section details -->
-    <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-      <p
-        class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
-      >
-        Challenge
-      </p>
-      <p
-        v-for="projectDetail in firstProject.Challenge"
-        :key="projectDetail.id"
-        class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-      >
-        {{ projectDetail.details }}
-      </p>
+        <!-- Single project objectives -->
+        <div class="mb-7">
+          <p
+            class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2 font-semibold text-gray-900"
+          >
+            Objective
+          </p>
+          <div class="relative pl-9">
+            <dd class="inline text-gray-600">
+              {{ firstProject.Objective }}
+            </dd>
+          </div>
+        </div>
+
+        <!-- Single project technologies -->
+        <div class="mb-7">
+          <p
+            class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2 font-semibold text-gray-900"
+          >
+            Tools & Technologies
+          </p>
+          <div class="relative pl-9">
+            <dd class="inline text-gray-600">
+              {{ firstProject.ToolsTechnologies }}
+            </dd>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single project right section details -->
+      <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0 animate-slide-in-left">
+        <p
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+        >
+          Challenge
+        </p>
+        <p
+          v-for="projectDetail in firstProject.Challenge"
+          :key="projectDetail.id"
+          class="mt-6 text-lg leading-8 text-gray-600"
+        >
+          {{ projectDetail.details }}
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="block sm:flex gap-0 sm:gap-10 mt-14">
-    <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+    <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0 animate-slide-in-left">
       <p
         class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
       >
@@ -165,12 +141,12 @@ export default {
       <p
         v-for="projectDetailF in firstProject.future"
         :key="projectDetailF.id"
-        class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+        class="mt-6 text-lg leading-8 text-gray-600"
       >
         {{ projectDetailF.details }}
       </p>
     </div>
-    <div class="w-full sm:w-1/3 text-left">
+    <div class="w-full sm:w-1/3 text-left animate-slide-in-left">
       <img
         src="../../assets/Imagenes/Digitacion_play.png"
         alt="Ejemplo de Imagen"
@@ -178,50 +154,40 @@ export default {
     </div>
   </div>
 
-  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
-  
-  >
+  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <h2
         class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
       >
-      Do you want to try the game?
+        Do you want to try the game?
       </h2>
     </div>
 
-    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
-    >
-      <form class="space-y-6" action="#" method="POST">
-        <div>
-          <button
-            type="submit"
-            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-           Play
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  
-
-
-
-  <!-- <div
-    class="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
-  >
-    <p
-      class="font-general-regular text-primary-dark dark:text-primary-light text-3xl font-bold mb-10 sm:mb-14 text-left"
-    >
-      Titulo
-    </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-4 gap-10">
-      <div v-for="item in firstProject.imgRelacionadas" :key="item.id">
-        <img :src="item.img" class="rounded-xl cursor-pointer" />
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div class="space-y-6">
+        <a
+          href="https://delfo31.itch.io/digitacin-001"
+          class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Play
+        </a>
       </div>
     </div>
-  </div> -->
-
+  </div>
 </template>
+<style>
+    @keyframes slide-in-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .animate-slide-in-left {
+        animation: slide-in-left 1s ease-out;
+    }
+</style>

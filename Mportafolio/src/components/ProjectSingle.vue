@@ -8,11 +8,13 @@ export default {
 </script>
 
 <template>
+  
   <router-link
     :to="project.road"
     class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
     aria-label="Single Project"
   >
+  
     <div>
       <img
         :src="project.img"
@@ -29,9 +31,11 @@ export default {
         {{ project.title }}
       </p>
       <span
-        class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light"
+        class="text-base font-semibold leading-7 text-indigo-600"
         >{{ project.category }}</span
       >
+
+      
     </div>
   </router-link>
 </template>
