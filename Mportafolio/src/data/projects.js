@@ -75,7 +75,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Digitacion001",
+    title: "Digitacion 001",
     category: "Web Game",
     img: "../../src/assets/Imagenes/Miniatura2.png",
     imgRelacionadas: [
@@ -178,9 +178,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "On Round",
+    title: "Turn Around",
     category: "Mobile Game",
-    img: "../../src/assets/Imagenes/Miniatura1.png",
+    img: "../../src/assets/Imagenes/Miniatura4.png",
     imgRelacionadas: [
       {
         id: 1,
@@ -227,6 +227,45 @@ const projects = [
         id: 1,
         details:
           "The game is currently in a testing phase where significant improvements can be made. Planned enhancements include a 2vs2 mode, the addition of different worlds, customizable appearances, and unlockable motorcycles. If you're interested in this project, we invite you to get in touch with us.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "VueJs Participatee Platform",
+    category: "Web Application",
+    img: "../../src/assets/Imagenes/Miniatura5.png",
+    road: { name: "Project5" },
+    aboutCliente: {
+      Name: "Freelance",
+      Services: "Full stack developer",
+      Website: "https://zingy-pothos-897009.netlify.app/",
+      Phone: "----",
+    },
+    Objective:
+      "Encourage code reuse and promote the adoption of best development practices.",
+    ToolsTechnologies: "HTML, CSS, JavaScript, Vue.js, TailwindCSS",
+
+    Challenge: [
+      {
+        id: 1,
+        details:
+          "During my training in Vue.js, I undertook a practice exercise that involved implementing forms and other functions. Upon completing the exercise, a web application for managing sick pets is generated. ",
+      },
+      {
+        id: 2,
+        details:
+          "However, in order to enhance my skills, I decided to shift the purpose of the web application. It now serves as a platform where users can create registrations for events or courses. Furthermore, the administrator has the capability to generate a participant's certificate along with a QR code.",
+      },
+    ],
+    future: [
+      {
+        id: 1,
+        details: "a",
+      },
+      {
+        id: 2,
+        details: "a",
       },
     ],
   },

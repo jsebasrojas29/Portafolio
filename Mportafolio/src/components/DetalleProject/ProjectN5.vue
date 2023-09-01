@@ -5,22 +5,44 @@ export default {
   data() {
     return {
       // Almacena el primer proyecto en una propiedad de datos
-      firstProject: projects[3],
-      showDiv: false,
+      firstProject: projects[4],
     };
   },
   mounted() {
     window.scrollTo(0, 0); // Esto hace que la página se desplace hacia arriba
-  },
+  }
 };
 </script>
 <template>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div>
-      <img
-        src="../../assets/Imagenes/BannerOnRound.jpg"
-        class="rounded-xl cursor-pointer"
-      />
+    <!-- Project heading and meta info -->
+    <p
+      class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
+    >
+      {{ firstProject.title }}
+    </p>
+    <div class="flex">
+      <div class="flex items-center mr-10">
+        <i
+          data-feather="clock"
+          class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
+        ></i>
+
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">
+          {{ firstProject.category }}
+        </h2>
+      </div>
+      <div class="flex items-center">
+        <i
+          data-feather="tag"
+          class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
+        ></i>
+        <span
+          class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+        >
+          <!-- {{ singleProjectHeader.singleProjectTag }} -->
+        </span>
+      </div>
     </div>
 
     <div class="block sm:flex gap-0 sm:gap-10 mt-14">
@@ -90,11 +112,9 @@ export default {
       </div>
 
       <!-- Single project right section details -->
-      <div
-        class="w-full sm:w-2/3 text-left mt-10 sm:mt-0 animate-slide-in-left"
-      >
+      <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0 animate-slide-in-left">
         <p
-          class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl"
         >
           Challenge
         </p>
@@ -107,61 +127,35 @@ export default {
         </p>
       </div>
     </div>
+  </div>
 
-    <div class="block sm:flex gap-0 sm:gap-10 mt-14 animate-slide-in-left">
-      <div class="w-full sm:w-2/3 text-left">
-        <img
-          src="../../assets/Imagenes/DesarrolloTA.png"
-          alt="Ejemplo de Imagen"
-        />
-      </div>
-      <div class="w-full sm:w-1/3 text-left mt-10 sm:mt-0">
-        <p
-          class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
-        >
-          Other data
-        </p>
-        <p
-          v-for="projectDetailF in firstProject.future"
-          :key="projectDetailF.id"
-          class="mt-6 text-lg leading-8 text-gray-600"
-        >
-          {{ projectDetailF.details }}
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 animate-slide-in-left"
-    >
-      <div
-        class="embed-responsive embed-responsive-4by3 relative w-full overflow-hidden"
-        style="padding-top: 75%"
-      >
-        <iframe
-          class="embed-responsive-item absolute bottom-0 left-0 right-0 top-0 h-full w-full"
-          src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
-          allowfullscreen=""
-          data-gtm-yt-inspected-2340190_699="true"
-          id="240632615"
-        ></iframe>
+  <div class="block sm:flex gap-0 sm:gap-10 mt-14 animate-slide-in-left" >
+    <div class="w-full sm:w-3/3 text-left mt-10 sm:mt-5">
+      <div class="mb-10 sm:mb-0">
+        <a href="https://github.com/jsebasrojas29/Participa">
+          <img
+            src="../../assets/Imagenes/webParticipa.png"
+            class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+            alt="Web Whisky"
+          />
+        </a>
       </div>
     </div>
   </div>
 </template>
 <style>
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+    @keyframes slide-in-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
-.animate-slide-in-left {
-  animation: slide-in-left 1s ease-out;
-}
+    .animate-slide-in-left {
+        animation: slide-in-left 1s ease-out;
+    }
 </style>
