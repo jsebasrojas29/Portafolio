@@ -140,7 +140,7 @@ export default {
       >
         <iframe
           class="embed-responsive-item absolute bottom-0 left-0 right-0 top-0 h-full w-full"
-          src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
+          src="https://www.youtube.com/embed/Dm_3zxwLzVw"
           allowfullscreen=""
           data-gtm-yt-inspected-2340190_699="true"
           id="240632615"

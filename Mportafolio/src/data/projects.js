@@ -116,7 +116,7 @@ const projects = [
       {
         id: 2,
         details:
-          "Due to various circumstances throughout the semester, the video project was not fully completed, specifically lacking the musical component intended to provide closure to the application. Nevertheless, the video game encompasses all the expected aspects envisioned during its development.",
+          "Due to various circumstances throughout the semester, the  project was not fully completed, specifically lacking the musical component intended to provide closure to the application. Nevertheless, the video game encompasses all the expected aspects envisioned during its development.",
       },
       {
         id: 3,
@@ -266,6 +266,65 @@ const projects = [
       {
         id: 2,
         details: "a",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Card game",
+    category: "cross platform game",
+    img: "../../src/assets/Imagenes/Miniatura6.jpg",
+    imgRelacionadas: [
+      {
+        id: 1,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 2,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 3,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+      {
+        id: 4,
+        img: "../../src/assets/Imagenes/Dg001.jpg",
+      },
+    ],
+    road: { name: "Project6" },
+    aboutCliente: {
+      Name: "Freelance",
+      Services: "Full stack developer",
+      Website: "----",
+      Phone: "----",
+    },
+    Objective:
+      "Developing a  video game with 'RogueLike' characteristics.",
+    ToolsTechnologies: "Unity & Procreate",
+
+    Challenge: [
+      {
+        id: 1,
+        details:
+          "Currently, I am immersed in the development of an exciting cross-platform card game inspired by the roguelike style. In this game, players will take on the role of brave champions who will venture through the levels of a gigantic tower. However, the task won't be easy, as the tower is filled with formidable monsters that become more dangerous as you ascend.",
+      },
+      {
+        id: 2,
+        details:
+          "For this first version of the game, I have designed three different champions: the warrior, the mage, and the summoner. Each of them possesses a unique set of abilities and the possibility to enhance them through special cards. Additionally, players will also have the opportunity to discover valuable support items, such as potions, during their thrilling adventure.",
+      }
+    ],
+    future: [
+      {
+        id: 1,
+        details:
+          "Currently, the game is in an early development stage; nevertheless, the core mechanics have already been implemented. I invite you to take a look at the gameplay video below for a preview of the gameplay.",
+      },
+      {
+        id: 2,
+        details:
+          "As for our expectations, we intend to create an immersive narrative for each of the champions exploring the tower, giving them prominence beyond their unique abilities. Furthermore, we are planning to introduce more champions in future game updates.",
       },
     ],
   },

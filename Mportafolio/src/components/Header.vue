@@ -1,8 +1,35 @@
 <script setup>
 import { computed } from "vue";
 import { RouterLink, useRoute } from "vue-router";
+import miArchivoPDF from '../assets/Resumen.pdf';
 const PaginaInicio = computed(() => route.name == "Inicio");
 const route = useRoute();
+
+import { ref } from 'vue';
+
+
+
+const descargarPDF = () => {
+  // Crea un objeto Blob a partir del archivo PDF
+  fetch(miArchivoPDF)
+    .then(response => response.blob())
+    .then(blob => {
+      // Crea un enlace de descarga
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'mi_archivo.pdf'; // Nombre del archivo a descargar
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+    })
+    .catch(error => {
+      console.error('Error al descargar el PDF', error);
+    });
+};
+
+
 </script>
 <template>
   <header class="bg-slate-800" :class="{ header: PaginaInicio }">
@@ -25,13 +52,19 @@ const route = useRoute();
             >
               Inicio
             </RouterLink>
-            <RouterLink
+            <!-- <RouterLink
               :to="{ name: 'Contactme' }"
               class="text-white uppercase font-bold"
               active-class="text-orange-500"
             >
               Contact me
-            </RouterLink>
+            </RouterLink> -->
+            <button
+           
+              class="text-white uppercase font-bold"
+              @click="descargarPDF"
+              >Resumen</button
+            >
           </nav>
         </div>
       </div>
@@ -55,6 +88,7 @@ const route = useRoute();
               class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >check out my Linkedin</a
             >
+            
           </div>
         </div>
       </div>
